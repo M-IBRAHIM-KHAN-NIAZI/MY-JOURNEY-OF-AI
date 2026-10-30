@@ -32,5 +32,8 @@
   - **Git Branch Merging (VS Code Three Dots Menu)**:
   * **Same Functionality**: Chahe aap repository ke upar wale three dots (`...`) par click karein ya neeche changes panel wale three dots par, dono ka result bilkul same hota hai[cite: 4, 5].
   * **Merge Process**: Kisi bhi menu par click karke **Branch > Merge...** select karein[cite: 5], aur apni desired branch ko main branch ke sath successfully merge kar lein.
+  # VS Code: Create & Switch Branch
+1. Click current branch name (bottom-left corner).
+2. Type/select **Create new branch...**, enter name, and press **Enter**.
 
   
