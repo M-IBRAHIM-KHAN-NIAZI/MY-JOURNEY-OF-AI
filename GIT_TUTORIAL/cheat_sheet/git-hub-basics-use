@@ -1,0 +1,88 @@
+- **GitHub Collaboration & Setup Steps**:
+  1. **Repository Setup**:
+     - Pehle ek GitHub repository banayein (ya pehle se bani hui repository use karein)[cite: 5].
+  2. **Adding a Contributor**:
+     - Repository ki **Settings** mein jayein, **Collaborators** par click karein aur **Add people** option ke zariye apne partner/friend ko add karein taake woh bhi collaborate kar sakein.
+  3. **Cloning & Terminal Work**:
+     - Repository page par **Code** button par click karke **HTTPS URL** copy karein[cite: 5].
+     - Us URL ko apne computer ke terminal ya VS Code mein paste karke repository ko clone karein aur apna kaam shuru karein.
+ - **GitHub Issues Workflow Notes**:
+
+  1. **Where is the Issues Button?**:
+     - GitHub repository ke top tab menu mein **Code** ke theek saath **Issues** tab hota hai.
+
+  2. **Why We Use the Issues Tab?**:
+     - Project mein aane wale bugs, feature requests, tasks ya kisi new feature ki planning ko list aur track karne ke liye.
+     - Team members ke aapas mein discussion aur task assignment (Assignees) ke liye.
+
+  3. **Creating & Assigning an Issue**:
+     - **New Issue** button par click karke Title aur Description likhte hain.
+     - Right sidebar se issue ko kisi specific developer ko **Assign** (Assignees) karte hain.
+
+  4. **Comments & Discussion Flow**:
+     - **Contributor's Comment**: Jisko task assign hota hai, woh comment karta hai: *"Thanks, I will start working on this right away."*
+     - **Owner's Comment**: Project owner respond karta hai: *"Thanks, looking forward to it."*
+
+  5. **Closing the Issue**:
+     - Jab developer code/task complete kar leta hai aur Pull Request merge ho jaati hai, toh issue page ke neeche **Close Issue** (ya *Close as completed*) button par click karke issue band kar diya jata hai.
+    - **GitHub Issue Actions & Options**:
+
+  1. **Transfer Issue**:
+     - Issue ko kisi doosri repository mein shift karne ke liye (agar galti se galat repo mein issue ban gaya ho).
+
+  2. **Clone Issue**:
+     - Same issue ki duplicate copy banane ke liye (jab waisa hi task kisi aur feature ke liye repeat karna ho).
+
+  3. **Lock Conversation**:
+     - Issue ke discussion tab ko lock kar dena taake koi aur comment na kar sake (spam ya toxic comments se bachne ke liye).
+
+  4. **Pin Issue**:
+     - Important issue ko top par highlight kar dena taake saare contributors ko pehle wahi nazar aaye.
+
+  5. **Delete Issue**:
+     - Issue ko permanently delete kar dena (sirf admin/owner kar sakta hai; normal tasks ko close kiya jata hai, delete nahi).
+
+  6. **Reopen Issue**:
+     - Closed issue ko dobara open kar dena (agar bug dobara samne aa jaye ya task poora na hua ho).
+    - **GitHub Pull Request (PR) Workflow Notes**:
+
+  1. **What is a Pull Request (PR)?**:
+     - Pull Request ek tareeqa hai jisme aap project owner se request karte hain: *"Maine ek naya feature/code likha hai, please isko review karke main project code mein merge (add) kar lein."*
+
+  2. **Where is the Pull Requests Button?**:
+     - GitHub repository ke top tab menu mein **Issues** ke theek saath **Pull requests** tab hota hai.
+
+  3. **How to Create a Pull Request**:
+     - **Step 1 (Branch/Fork)**: Naya kaam karne ke liye alag branch banayein ya repository ko **Fork** karein.
+     - **Step 2 (Push)**: Apne code changes ko commit karke GitHub par push karein.
+     - **Step 3 (Compare & PR)**: GitHub par **Compare & pull request** button par click karein, Title aur Description (kya changes kiye hain) likhein, aur **Create pull request** par click kar dein.
+
+  4. **Review & Discussion**:
+     - Project owner / team members aapke code changes ko line-by-line dekhte hain (Code Review).
+     - Agar koi modification chahiye ho, toh woh PR ke andar hi comments karke feedback dete hain.
+
+  5. **Merging or Closing the PR**:
+     - **Merge Pull Request**: Jab code bilkul perfect ho, toh green **Merge pull request** button press kiya jata hai. Isse aapka code main project mein add ho jata hai.
+     - **Close Pull Request**: Agar code accept na karna ho, toh PR ko bina merge kiye close kar diya jata hai.
+
+      - **Fork vs Branch (Key Difference)**:
+
+  1. **Branch (Same Repository Ke Andar)**:
+     - Branch ek hi main repository ke andar banti hai.
+     - Agar tum aur tumhara dost dono ko ek hi Private/Public repo par direct access hai, toh tum alag branch bana kar kaam karte ho.
+
+  2. **Fork (Doosre Account Ki Repo Ka Clone)**:
+     - Fork poori ki poori repository ki **copy tumhare apne GitHub profile/account** par bana deta hai.
+     - Iski zaroorat tab hoti hai jab tumhare paas original repository par write access (direct push karne ki permission) na ho—jaise Open Source projects mein.
+
+  3. **Pull Request Workflow (Summary)**:
+     - Tum original repo ko **Fork** karte ho (copy tumhare account mein aa gayi).
+     - Apne fork ke andar kaam karke final changes ko compare karte ho.
+     - Phir original owner ko **Pull Request (PR)** bhejte ho taake woh tumhara code review karke apni main repo mein merge kar le.
+
+   - **Why Fork Fails on Own Repo**:
+  - Aap khud ki repository ko fork nahi kar sakte, kyunki Fork sirf **doosre developers ki public repositories** ki copy apne account mein banane ke liye hota hai[cite: 6].
+  - Apni hi repo par kaam karne ke liye fork ki zaroorat nahi hoti, seedha local system par changes karke push kiya jata hai[cite: 6].  
+
+- **Modern Git Workflow with AI (CodeWithHarry)**:
+  - Modern Git mein AI ka use bohot barh gaya hai,for example jahan agar samajh na aaye ke kya commit message likhna hai, toh ek **"Generate Commit"** ka button hota hai jo AI ki madad se khud-ba-khud sabse behtareen commit message likh kar de deta hai.

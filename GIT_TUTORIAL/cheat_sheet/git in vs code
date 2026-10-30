@@ -1,0 +1,36 @@
+- **VS Code Git Workflow Notes**:
+  1. **Code Writing**: Sab se pehle VS Code mein apni file ya folder ke andar code likhein ya modify karein (jaise "Hello Ibrahim" likhna aur styling add karna).
+  2. **Source Control Tab**: Left sidebar mein Git / Source Control wale icon par click karein taake changes nazar aayein.
+  3. **Staging the Changes**: Jo files ya changes tumne kiye hain, unke samne bane hue plus (`+`) icon par click karke unhein **Staged Changes** mein move karein.
+  4. **Commit with a Message**: Staging ke baad, Message box mein apne kaam ya problem ka naam/message likhein aur **Commit** button par click karein.
+  5. **Publish / Push to GitHub**: Pehli baar **Publish Branch** par click karke repository ko direct GitHub par online publish kar dein, taake woh safe ho jaye.
+
+  **Ek Parent Folder mein Git (`git init`) ka Nuskha**:
+  - Agar tu apne saare projects (jaise Git Tutorial, Python, DSA waghera) ko ek hi bare parent folder (jaise `MY JOURNEY OF AI`) ke andar rakhta hai aur sirf wahan ek hi baar `git init` chala deta hai, toh woh poora folder ek hi Git repository ban jata hai.
+  - Lekin iska ek nuksan yeh hota hai ke GitHub par woh saare alag-alag projects ek hi jagah khichdi ban kar upload ho sakte hain, ya phir nested repositories (sub-modules) ka masla ban jata hai jo beginners ke liye complex ho jata hai.
+  
+- **Best Practice kya hai?**:
+  - Har naye project ya repository ke liye alag folder banana aur usko alag initialize karna hi professional tareeqa hai, taake har project ka record, commits, aur files bilkul saaf aur alag-alag rahein.
+  - **Best Git Commit Strategy (Best Practice)**:
+  1. **Ek Problem = Ek Alag Commit (Recommended)**:
+     - Jab bhi tu koi nayi problem solve kare (jaise array ya string ka koi ek sawal), usko apni file mein likh kar save kare, toh sirf ussi specific problem ko stage (`+`) kar ke commit kare.
+     - Commit message mein us problem ka naam ya number likh de (jaise: `"Solved: Two Sum problem in array"`).
+     
+  2. **Kyun Yeh Best Hai?**:
+     - Jab tu baad mein apna GitHub profile ya **Git Graph** dekhega, toh tujhe aur kisi bhi recruiter ko saaf nazar aayega ke tune kis din kaun kaun si specific problem solve ki thi. Yeh tera strong "Proof of Work" banta hai.
+     - Agar tu din bhar ke 5-6 alag topics ya problems ko aik hi baar mein ikhatta commit kar dega, toh history mein sirf aik hi lamba message aayega, jisse pata nahi chalega ke andar kya kya solve kiya tha.
+
+  3. **Folder Level par Kya Karein?**:
+     - Poore folder ko ek sath tabhi commit karna chahiye jab tu koi naya project shuru kare (jaise pehle din **Initial Commit** kiya tha) ya koi bada structure ek sath add kar raha ho. Lekin daily coding aur DSA ke liye **problem-by-problem (one-by-one) commit** karna hi sabse best aur professional tareeqa hai!
+
+     **VS Code Diye Gaye Options (Merge Conflict UI)**:
+     - **Accept Current Change**: Is par click karne se aapki current branch ka code file mein reh jata hai aur doosra hata diya jata hai.
+     - **Accept Incoming Change**: Is par click karne se doosri branch (incoming/hotfix) wala code aa jata hai.
+     - **Accept Both Changes**: Is option se dono branches ka code file mein ikhatta save ho jata hai.
+     - **Compare Changes**: Dono codes ko side-by-side compare karne ke liye use hota hai.
+     
+  - **Git Branch Merging (VS Code Three Dots Menu)**:
+  * **Same Functionality**: Chahe aap repository ke upar wale three dots (`...`) par click karein ya neeche changes panel wale three dots par, dono ka result bilkul same hota hai[cite: 4, 5].
+  * **Merge Process**: Kisi bhi menu par click karke **Branch > Merge...** select karein[cite: 5], aur apni desired branch ko main branch ke sath successfully merge kar lein.
+
+  
