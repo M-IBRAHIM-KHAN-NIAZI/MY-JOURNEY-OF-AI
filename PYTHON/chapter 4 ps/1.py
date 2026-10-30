@@ -1,0 +1,11 @@
+vegetables=[]
+v1=int((input("enter your vegtables name: "))
+vegetables.append(v1)
+v2=int(input("enter your vegtables name: "))
+vegetables.append(v2)
+v3=int(input("enter your vegtables name: "))
+vegetables.append(v3)
+v4=int(input("enter your vegtables name: "))
+vegetables.append(v4)
+vegetables.sort()
+print(vegetables)

@@ -1,0 +1,57 @@
+# Test karne ke liye ek sample matrix define kar rahe hain
+matrix = [
+    [1, 1, 1],
+    [1, 0, 1],
+    [1, 1, 1]
+]
+
+def setZeroes(matrix):
+    # m total rows ki ginti (count) store karta hai
+    m = len(matrix)       
+    # n total columns ki ginti store karta hai (pehli row ki lambai se)
+    n = len(matrix[0])    
+    
+    # Yeh do flags pehli row aur pehle column ki original state yaad rakhne ke liye hain
+    first_row_zero = False
+    first_col_zero = False
+    
+    # Step 1: Check karo kya pehli row mein koi zero mojood hai ya nahi
+    for j in range(n):
+        if matrix[0][j] == 0:
+            first_row_zero = True
+            break  # Jaise hi pehla zero mile, yeh loop wahin ruk jayega
+            
+    # Step 2: Check karo kya pehle column mein koi zero mojood hai ya nahi
+    for i in range(m):
+        if matrix[i][0] == 0:
+            first_col_zero = True
+            break  # Jaise hi pehla zero mile, yeh loop bhi wahin ruk jayega
+            
+    # Step 3: Pehli row aur pehle column ko markers (nishani) ke tor par use karna
+    # Hum range(1, m) aur range(1, n) isliye use karte hain taake index 0 wale borders safe rahein
+    for i in range(1, m):       # i rows ko represent karta hai (upar se neeche)
+        for j in range(1, n):   # j columns ko represent karta hai (left se right)
+            if matrix[i][j] == 0:
+                matrix[i][0] = 0  # Row head (pehla column) par zero ki nishani laga do
+                matrix[0][j] = 0  # Column head (pehli row) par zero ki nishani laga do
+                
+    # Step 4: Markers ki madad se andar wali matrix ke cells ko zero karna
+    # Yahan dhyan rakhna hai ke inner loop mein 'j' use ho raha hai taake row aur column mix na hon
+    for i in range(1, m):
+        for j in range(1, n):
+            if matrix[i][0] == 0 or matrix[0][j] == 0:
+                matrix[i][j] = 0
+                
+    # Step 5: Agar pehli row ka flag True tha, toh poori pehli row ko zero kar do
+    if first_row_zero:
+        for j in range(n):
+            matrix[0][j] = 0
+            
+    # Step 6: Agar pehle column ka flag True tha, toh poore pehle column ko zero kar do
+    if first_col_zero:
+        for i in range(m):
+            matrix[i][0] = 0
+
+# Function call karke matrix pass kar rahe hain aur output print kar rahe hain
+setZeroes(matrix)
+print(matrix)

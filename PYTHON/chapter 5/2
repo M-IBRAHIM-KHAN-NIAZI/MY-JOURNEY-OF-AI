@@ -1,0 +1,13 @@
+set={1,13,6}
+set1={23,1,99,44}
+print(set.union(set1))
+set.add(100)
+print(set)
+n=set.update(set1)
+print(n)
+L=set.copy()
+print(L)
+p=set.issubset(set1)
+print(p)
+q=set.difference(set1)
+print(q)

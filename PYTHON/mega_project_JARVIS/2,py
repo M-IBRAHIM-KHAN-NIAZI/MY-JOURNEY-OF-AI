@@ -1,0 +1,94 @@
+import speech_recognition as sr
+import webbrowser
+from gtts import gTTS
+import pygame
+import os
+import time
+import musiclibrary
+# from openai import OpenAI
+from google import genai
+recognizer = sr.Recognizer()
+
+# Initialize pygame mixer for background audio
+pygame.mixer.init()
+
+
+def openaiprocess(command):
+    client = genai.Client(api_key="AQ.Ab8RN6K0iBW4244Q_yk1WQtAiS-RsQl4995Avyte5c2lg9cUGw")
+    response = client.models.generate_content(
+        model="gemini-3.5-flash",
+        contents=command,
+    )
+    print(response.text)
+    speak(response.text)
+
+     
+    
+def processcommand(c):
+    if "open google" in c.lower():
+        webbrowser.open("https://google.com")
+    elif "open facebook" in c.lower():
+        webbrowser.open("https://facebook.com")
+    elif "open youtube" in c.lower():
+        webbrowser.open("https://youtube.com")
+    elif"open freefire" in c.lower():
+        webbrowser.open("https://freefire.com")
+    elif c.lower() .startswith("play"):
+          song=" ".join(c.lower().split(" ")[1:])
+          link=musiclibrary.song[song]
+          webbrowser.open(link)   
+    else:
+            #openai handle the rest
+            output=openaiprocess(c)
+            speak(output)
+             
+
+    
+def speak(text):
+    print(f"JARVIS: {text}")
+    tts = gTTS(text=text, lang='en')
+    
+    filename = "jarvis_output.mp3"
+    tts.save(filename)
+    
+    pygame.mixer.music.load(filename)
+    pygame.mixer.music.play()
+    
+    # Jab tak audio chal rahi hai, tab tak loop ko roke rakho
+
+    while pygame.mixer.music.get_busy():
+        pygame.time.Clock().tick(10)
+        
+    # Audio khatam hone ke baad mixer se music unload kar do taaki file unlock ho jaye
+    pygame.mixer.music.unload()
+# (Neeche ka while True loop aapka waise hi rahega)
+
+if __name__ == "__main__":
+    speak("Initializing Jarvis...")
+while True:
+        try:
+            r = sr.Recognizer()
+            with sr.Microphone() as source:
+                print("listening...")
+                audio = r.listen(source,timeout=2,phrase_time_limit=2)
+                print("recognizing...")
+                
+            word = r.recognize_google(audio)
+            print(f"User said: {word}")
+            
+            if "jarvis" in word.lower():
+                speak("ya")
+                print("jarvis active...")
+
+                
+                with sr.Microphone() as source2:
+                    audio2 = r.listen(source2,)
+                    command = r.recognize_google(audio2)
+                    print(f"Command: {command}")
+                    processcommand(command)
+                    
+                    
+                    
+                    
+        except Exception as e:
+            print(f"error; {e}")

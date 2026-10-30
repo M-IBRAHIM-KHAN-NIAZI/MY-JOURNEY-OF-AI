@@ -1,0 +1,28 @@
+s = "cbaebabacd"
+p = "abc"
+
+# 26 English alphabets ke liye frequency count arrays
+p_count = [0] * 26
+s_count = [0] * 26
+
+# Pattern 'p' ki frequencies count kar lo
+for char in p:
+    p_count[ord(char) - ord('a')] += 1
+
+k = len(p)
+result = []
+
+for i in range(len(s)):
+    # 1. Incoming character ko window mein add karo
+    s_count[ord(s[i]) - ord('a')] += 1
+    
+    # 2. Agar window size 'k' se barri ho jaye, toh peeche wale (outgoing) ko minus karo
+    if i >= k:
+        s_count[ord(s[i - k]) - ord('a')] -= 1
+        
+    # 3. Agar current window ka count pattern ke barabar ho jaye
+    if s_count == p_count:
+        # Anagram ka starting index add kar lo
+        result.append(i - k + 1)
+
+print("Anagram Starting Indices:", result)
