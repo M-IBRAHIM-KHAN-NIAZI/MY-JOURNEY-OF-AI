@@ -1,0 +1,31 @@
+# ==========================================
+# MATHEMATICAL EQUATION & COMPLEMENT CONCEPT:
+# ==========================================
+# 1. Humein pata hai ke: 
+#    Number_1 + Number_2 = Target
+# 
+# 2. Agar humein Number_1 (yaani current number) pata hai aur Target bhi pata hai, 
+#    toh Number_2 nikalne ke liye equation ko rearrange kar lete hain:
+#    Number_2 = Target - Number_1
+#
+# 3. Isi ko "Complement" kehte hain:
+#    Yahi jo Number_2 hai, jo hamare current number ka bacha hua hissa hai 
+#    jo target tak pahunchne ke liye zaroori hai, isko programming ki zaban mein 
+#    complement (yaani poora karne wala) kehte hain.
+# ==========================================
+
+nums = [2, 7, 11, 15]
+target = 9
+seen = {}
+
+for i, num in enumerate(nums):
+    # Target mein se current number minus karke complement nikal rahe hain
+    complement = target - num
+    
+    # Check kar rahe hain ke kya yeh complement pehle se dictionary mein maujud hai
+    if complement in seen:
+        print([seen[complement] + 1, i + 1])
+        break
+        
+    # Agar nahi hai, toh current number aur uska index store kar lo
+    seen[num] = i
