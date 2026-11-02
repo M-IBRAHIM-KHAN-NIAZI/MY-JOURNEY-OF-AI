@@ -6,8 +6,8 @@ seen_map = {}  # Dictionary {number: index} store karne ke liye
 result = []    # Final answer ke liye
 
 for i in range(len(nums)):
-    current = nums[i]
-    complement = target - current  # Target tak pahunchne ke liye kitna chahiye
+    current_num = nums[i]
+    complement = target - current_num  # Target tak pahunchne ke liye kitna chahiye
     
     # Check karo kya complement pehle se map mein hai?
     if complement in seen_map:
@@ -20,7 +20,7 @@ for i in range(len(nums)):
         # jo purana index (jaise 0) pada hota hai, usko nikal kar le aati hai!
         break # Answer mil gaya toh loop rok do
     else:
-        seen_map[current] = i  # Agar nahi hai toh current number aur index save kar do
+        seen_map[current_num] = i  # Agar nahi hai toh current number aur index save kar do
 
 print(result)  
 # Output: [0, 1]
