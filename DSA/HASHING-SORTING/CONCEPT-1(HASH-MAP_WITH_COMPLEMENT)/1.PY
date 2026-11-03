@@ -1,4 +1,4 @@
-# Simple variables aur plain code bina kisi 'def' function ke
+#                                   leetcode-167-two-sum-2-sorted 
 nums = [2, 7, 11, 15]
 target = 9
 
