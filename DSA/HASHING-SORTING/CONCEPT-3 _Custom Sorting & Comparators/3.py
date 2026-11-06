@@ -26,16 +26,9 @@
 # - CASE B: OVERLAP (TAKRAO HAIN)
 #   Agar 'A ka END TIME >= B ka START TIME' (e.g., A = [1, 6], B = [2, 8])
 #   Matlab 'A' shaam 6 baje tak chal raha tha, lekin 'B' shaam 2 baje hi shuru ho gaya!
-#   'B' pichle interval ke chalte hue time ke andar hi ghus gaya. Isi ko OVERLAP kehte hain.
+#   'B' pichle interval ke chalte hue time ke andar hi ghus gaya. Isi ko OVERLAP kehte hai
 #
-# 3. TEESRA QUESTION: HUM SIRF AAKHRI INTERVAL KE END TIME KO HIN KYUN UPDATE KARTE HAIN?
-# -------------------------------------------------------------------------------------
-# - Kyunki Sorting ki wajah se START TIME pehle hi sabse chota wala set ho chuka hota hai
-#   (jaise [1, 6] mein '1' fix hai).
-# - Jab doosra interval [2, 8] overlap karta hai, toh humein bas yeh check karna hota hai
-#   ke yeh naya interval kahin hamare boundary time ko aur aage toh nahi le kar ja raha.
-#
-# 4. CHOUTHA QUESTION: 'max(merged[-1][1], interval[1])' KA ASAL CHAKKAR KYA HAI?
+# 3. CHOUTHA QUESTION: 'max(merged[-1][1], interval[1])' KA ASAL CHAKKAR KYA HAI?
 # -------------------------------------------------------------------------------------
 # - Misal 1 (Lamba Naya Interval):
 #   Pichla group = [1, 6]  (End = 6)
