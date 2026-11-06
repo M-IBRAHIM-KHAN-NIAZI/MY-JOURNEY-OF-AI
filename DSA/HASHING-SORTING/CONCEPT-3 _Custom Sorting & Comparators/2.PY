@@ -1,14 +1,24 @@
-                  #LeetCode 56: Merge Intervals (The Ultimate Classic)
-intervals = [[8, 10], [1, 3], [2, 6], [15, 18]]
-intervals.sort(key=lambda x:x[0])
-merged=[]
+                                  ## LeetCode 436: Find Right Interval##
+from bisect import bisect_left
+
+intervals = [[3, 4], [1, 2], [4, 5]]
+
+starts=sorted((interval[0],i)for i,interval in enumerate(intervals))
+
+starts_time=[s[0] for s in starts]
+result=[]
+
 for interval in intervals:
+    end_value=interval[1]
+    index=bisect_left(starts_time,end_value)
 
-    if not merged or merged[-1][1] < interval[0]:
-      
-        
-      merged.append(interval)
+    if index<len(starts_time):
+        result.append(starts[index][1])
     else:
-      merged[-1][1]=max(merged[-1][1],interval[1])
+        result.append(-1)
+print(result)            
 
-print(merged)
+
+
+
+

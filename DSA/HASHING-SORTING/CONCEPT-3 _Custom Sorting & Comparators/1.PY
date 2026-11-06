@@ -1,9 +1,14 @@
-# Concept 4: Custom Sorting & Comparators
-# Unsorted intervals: [start_time, end_time]
+                  #LeetCode 56: Merge Intervals (The Ultimate Classic)
 intervals = [[8, 10], [1, 3], [2, 6], [15, 18]]
+intervals.sort(key=lambda x:x[0])
+merged=[]
+for interval in intervals:
 
-# Custom sort using lambda function based on the starting time (x[0])
-intervals.sort(key=lambda x: x[0])
+    if not merged or merged[-1][1] < interval[0]:
+      
+        
+      merged.append(interval)
+    else:
+      merged[-1][1]=max(merged[-1][1],interval[1])
 
-print("Sorted Intervals:", intervals)
-# Output: [[1, 3], [2, 6], [8, 10], [15, 18]]
+print(merged)
