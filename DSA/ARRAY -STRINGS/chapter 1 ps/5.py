@@ -1,3 +1,7 @@
+# LeetCode 48: Rotate Image (Matrix ko 90 degrees clockwise ghumana)
+# Is code mein hum matrix ko extra space use kiye bina in-place 
+# layers mein 4-way swapping karke rotate karte hain.
+
 matrix = [
     [5, 1, 9, 11],
     [2, 4, 8, 10],

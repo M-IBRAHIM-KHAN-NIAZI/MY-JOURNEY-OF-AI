@@ -1,3 +1,7 @@
+# LeetCode 73: Set Matrix Zeroes
+# (Is problem mein, agar kisi 2D matrix mein koi element 0 hai,
+# toh uski poori row aur column ko 0 karna hota hai.)
+
 matrix=[[1,1,1],
         [1,0,1],
         [1,1,1]

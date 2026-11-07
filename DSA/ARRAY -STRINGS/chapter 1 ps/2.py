@@ -1,3 +1,8 @@
+# LeetCode 54: Spiral Matrix
+# (Is problem mein hamein ek 2D matrix ko spiral order 
+# yani clockwise direction mein traverse karke sare elements 
+# ko ek single list mein return karna hota hai.)
+
 matrix=[
     [1,2,3],
     [4,5,6],

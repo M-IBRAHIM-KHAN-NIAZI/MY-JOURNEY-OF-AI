@@ -1,4 +1,7 @@
 # Test karne ke liye ek sample matrix define kar rahe hain
+# Is approach mein hum extra space bachane ke liye matrix ki apni pehli row 
+# aur column ko markers (nishani) ke tor par use karte hain, taaki original 
+# data kharab na ho aur O(1) space mein matrix zero ho jaye.
 matrix = [
     [1, 1, 1],
     [1, 0, 1],
@@ -31,9 +34,9 @@ def setZeroes(matrix):
     # Hum range(1, m) aur range(1, n) isliye use karte hain taake index 0 wale borders safe rahein
     for i in range(1, m):       # i rows ko represent karta hai (upar se neeche)
         for j in range(1, n):   # j columns ko represent karta hai (left se right)
-            if matrix[i][j] == 0:
-                matrix[i][0] = 0  # Row head (pehla column) par zero ki nishani laga do
-                matrix[0][j] = 0  # Column head (pehli row) par zero ki nishani laga do
+            if matrix[i][j] == 0:# Agar matrix[i][j] mein ek bhi 0 mil jaye,tu ye code run kare ga, toh row aur column ko zero kar do 
+                matrix[i][0] = 0  #idr sirf phele element row or colunm ko zero karke nisani lagate hn phir next step mein
+                matrix[0][j] = 0  #un sare rows or columns ko zero kardete hn
                 
     # Step 4: Markers ki madad se andar wali matrix ke cells ko zero karna
     # Yahan dhyan rakhna hai ke inner loop mein 'j' use ho raha hai taake row aur column mix na hon
