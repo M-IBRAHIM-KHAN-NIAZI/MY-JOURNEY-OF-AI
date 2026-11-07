@@ -1,3 +1,7 @@
+# LeetCode 303: Range Sum Query - Immutable (chapter 4 ps / 1.py)
+# (Cumulative prefix sum array use karke O(1) time mein kisi bhi range ka sum nikalte hain, 
+# jahan formula prefix[right] - prefix[left-1] use hota hai.)
+
 nums = [-2, 0, 3, -5, 2, -1]
 prefix=[0]*len(nums)
 prefix[0]=nums[0]

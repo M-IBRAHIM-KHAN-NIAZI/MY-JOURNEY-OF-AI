@@ -1,3 +1,7 @@
+# LeetCode 560: Subarray Sum Equals K (chapter 4 ps / 3.py)
+# (Hash map / diary aur prefix sum technique use karke running sum ki frequencies track karte hain, 
+# aur current_sum - k ki count add karke total subarrays find karte hain.)
+
 nums=[1,1,1,]
 k=2
 total_subarrays=0
