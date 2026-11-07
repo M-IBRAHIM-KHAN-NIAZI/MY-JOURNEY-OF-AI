@@ -1,3 +1,7 @@
+# LeetCode 344: Reverse String (chapter 5 ps / 1.py)
+# (Two pointers use karke start aur end elements ko swap karte hain, 
+# aur pointers ko center ki taraf move karke string ko in-place reverse karte hain.)
+
 s = ["h", "e", "l", "l", "o"]
 left=0
 right=len(s)-1

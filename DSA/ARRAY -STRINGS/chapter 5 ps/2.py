@@ -1,3 +1,7 @@
+# LeetCode 242: Valid Anagram (chapter 5 ps / 2.py)
+# (Hash maps / frequency dictionaries use karke dono strings ke characters ki counts match karte hain, 
+# aur agar frequencies identical hon toh True return hota hai.)
+
 s = "anagram"
 t = "nagaram"
 if len(s) != len(t):
