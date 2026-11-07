@@ -22,7 +22,7 @@ for interval in intervals:
     # bisect_left se wo index dhoondo jahan start_time >= end_val ho
     idx = bisect_left(start_times, end_val)
     
-    # Agar index valid range mein hai, to original index utha lo, warna -1
+    # Agar index valid range mein hai, to original index utha lo, warna -1(matlab ke ek meeting time se bilkul hi alag time ajaye tu vo range se bahir hugya jiske liye ham -1 use karte hain)
     if idx < len(starts):
         res.append(starts[idx][1])
         # Misaal ke taur par agar bisect_left se index ki value '2' aayi hai:
