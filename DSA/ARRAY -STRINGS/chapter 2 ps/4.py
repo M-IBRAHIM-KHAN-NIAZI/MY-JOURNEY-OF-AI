@@ -1,3 +1,7 @@
+# LeetCode 11: Container With Most Water 
+# (Two pointers se dono ends par boundaries rakh kar maximum area calculate 
+# karte hain, aur choti height wale pointer ko andar ki taraf move karte hain.)
+
 height = [1,8,6,2,5,4,8,3,7]
 left=0
 right=len(height)-1

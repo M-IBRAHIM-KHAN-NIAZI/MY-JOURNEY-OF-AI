@@ -1,3 +1,7 @@
+# LeetCode 15: 3Sum (5.py)
+# (Array ko sort karke outer loop chalate hain, aur baaki do elements 
+# dhoondne ke liye two pointers (left, right) se zero sum triplets nikalte hain.)
+
 nums = [-1, 0, 1, 2, -1, -4]
 result = []
 n = len(nums)

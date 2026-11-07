@@ -1,3 +1,6 @@
+# LeetCode 125: Valid Palindrome
+# (Two pointers use karke string ko dono taraf se check karte hain, 
+# non-alphanumeric characters skip karke lowercase mein compare kiya jata hai.)
 s = "A man, a plan, a canal: Panama"
 left=0
 right=len(s)-1
