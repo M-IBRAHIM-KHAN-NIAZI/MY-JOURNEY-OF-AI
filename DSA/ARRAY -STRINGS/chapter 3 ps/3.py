@@ -1,3 +1,7 @@
+# LeetCode 3: Longest Substring Without Repeating Characters (chapter 3 ps / 3.py)
+# (Dynamic sliding window aur set use karke duplicate characters track karte hain, 
+# aur jab duplicate mile toh 'left' pointer se window shrink karke max length nikalte hain.)
+
 s="abcabcbb"
 left=0
 chr_set=set()

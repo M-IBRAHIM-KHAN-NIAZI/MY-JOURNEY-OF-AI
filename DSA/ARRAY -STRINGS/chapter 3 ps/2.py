@@ -1,3 +1,7 @@
+# LeetCode 209: Minimum Size Subarray Sum (chapter 3 ps / 2.py)
+# (Dynamic sliding window technique use karke 'right' pointer se sum badhate hain, 
+# aur jab sum >= target ho jaye toh 'left' pointer se window shrink karke min length track karte hain.)
+
 target = 7
 nums = [2, 3, 1, 2, 4, 3]
 left=0

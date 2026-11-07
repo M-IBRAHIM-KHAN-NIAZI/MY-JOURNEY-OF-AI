@@ -1,3 +1,7 @@
+# LeetCode 643: Maximum Average Subarray I (chapter 3 ps / 1.py)
+# (Fixed sliding window technique use karke pehle 'k' elements ka sum lete hain, 
+# phir window slide karke max sum update karte hain aur end mein average nikalte hain.)
+
 nums = [1, 12, -5, -6, 50, 3]
 k = 4
 current_sum=sum(nums[:k])
