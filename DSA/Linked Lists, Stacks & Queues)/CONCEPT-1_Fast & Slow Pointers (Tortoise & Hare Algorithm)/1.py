@@ -3,7 +3,7 @@
 class Node:
     def __init__(self,value):
         self.value=value
-        self.next=None
+        self.next=None  #jo cheez fix rehne hoti ha ose arguments mein nahi likhte or simple estrah likhte
 
 def has_cycle(head):
     slow=head

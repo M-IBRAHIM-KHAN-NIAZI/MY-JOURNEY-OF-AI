@@ -37,5 +37,5 @@ n3.next = n4
 n4.next = n2
 
 # Function call kiya
-result = has_cycle(n1)#sirf head matlab starting point dedo
+result = has_cycle(n1)#sirf head matlab starting point dena hota
 print(result)  # Output: True aayega!
