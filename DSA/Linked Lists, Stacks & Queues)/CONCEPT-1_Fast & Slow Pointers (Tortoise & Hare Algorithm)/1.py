@@ -4,6 +4,8 @@ class Node:
     def __init__(self,value):
         self.value=value
         self.next=None  #jo cheez fix rehne hoti ha ose arguments mein nahi likhte or simple estrah likhte
+         # Yeh isliye likhte hain kyunki aakhri node (tail) kisi ke sath join nahi ho raha hota aur yahan list khatam ho jati hai.
+         # tu error se bachne ke liye ye likhte hn
 
 def has_cycle(head):
     slow=head
