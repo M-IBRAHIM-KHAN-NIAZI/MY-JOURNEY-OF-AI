@@ -32,8 +32,8 @@ class Solution: #you can write code without making this class and we write self 
         list2 = list2.next  # List 2 ko ek kadam aage badha do
 
       # Builder (tail) ko aage khiska kar naye jude hue dabbe par le aao
-      tail = tail.next
-
+      tail = tail.next #ye hamara main tail jo hota ha usko ek step aage karta ha or oper jo hain vo lists ke andr elemets
+                      #ko aage karte hain
     # -----------------------------------------------------------------
     # STEP 3: HANDLING LEFTOVERS (Bache hue dabbe seedha jodh do)
     # -----------------------------------------------------------------
