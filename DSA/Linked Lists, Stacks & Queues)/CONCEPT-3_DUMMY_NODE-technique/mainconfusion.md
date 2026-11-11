@@ -9,5 +9,5 @@
 # 2. LEFT SIDE (".next" left side par ho, jaise: tail.next = list1 ya current.next = prev):
 #    - Yeh "Action / Mutation / Writing" ka kaam karta hai.
 #    - Left side par address save karne ka matlab hi yeh hota hai ke 
-#      wahan naya connection ya arrow ban gaya hai (ya reverse ho gaya hai)!
+#      wahan naya connection ya arrow ban gaya hai !
 # ==========================================
