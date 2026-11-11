@@ -1,3 +1,4 @@
+#leetCode 19: Remove Nth Node From End of List
 class ListNode:
 
   def __init__(self, val=0, next=None):
@@ -7,7 +8,7 @@ class ListNode:
 
 def removeNthFromEnd(head: ListNode, n: int) -> ListNode:
   # Step 1: Dummy node banao aur usko asli list ke sath jod do (Safety Shield)
-  dummy = ListNode(0)
+  dummy = ListNode(-1)
   dummy.next = head
 
   # Step 2: Dono pointers (slow aur fast) ko dummy par khada karo

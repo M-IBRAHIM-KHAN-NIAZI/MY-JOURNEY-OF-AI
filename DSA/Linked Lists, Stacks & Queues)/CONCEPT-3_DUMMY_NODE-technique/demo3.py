@@ -14,8 +14,8 @@ def partition(head, x):
   # 1. Do farzi (dummy) lists banate hain:
   # - less_dummy: x se chote numbers ke liye (< x)
   # - greater_dummy: x se bade ya barabar numbers ke liye (>= x)
-  less_dummy = listnode(0)
-  greater_dummy = listnode(0)
+  less_dummy = listnode(-1)
+  greater_dummy = listnode(-1)
 
   # Pointers jo aage chal kar nayi lists banayenge
   less = less_dummy
@@ -74,6 +74,6 @@ print("Updated List Values:")
 current = new_head #hm yaha current = new_head esliye banate ye vala current new jo list banayi ospe chale ga 
                     #or phele vala purane pe
 while current is not None:
-  print(current.value, end=" -> ")
+  print(current.value,end="->")
   current = current.next
 print("None")
