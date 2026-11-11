@@ -42,7 +42,8 @@ def partition(head, x):
 
 
   # 5. Final updated list wapas return kar do
-  return less_dummy.next
+  return less_dummy.next# 'less_dummy' ek placeholder/dummy node hai, isliye '.next' use karte hain 
+# taake dummy ko chhod kar asli required elements wali original list mil jaye.
 
 
 # ==========================================
@@ -70,7 +71,8 @@ new_head = partition(head, x)
 
 # 4. Saari values ko simple loop se print karwa liya
 print("Updated List Values:")
-current = new_head
+current = new_head #hm yaha current = new_head esliye banate ye vala current new jo list banayi ospe chale ga 
+                    #or phele vala purane pe
 while current is not None:
   print(current.value, end=" -> ")
   current = current.next
