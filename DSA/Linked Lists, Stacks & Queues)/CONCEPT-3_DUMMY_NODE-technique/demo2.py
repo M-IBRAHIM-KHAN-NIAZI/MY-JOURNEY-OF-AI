@@ -1,9 +1,9 @@
 #leetCode 19: Remove Nth Node From End of List
 class ListNode:
 
-  def __init__(self, val=0, next=None):
+  def __init__(self, val):
     self.val = val
-    self.next = next
+    self.next = None
 
 
 def removeNthFromEnd(head: ListNode, n: int) -> ListNode:
