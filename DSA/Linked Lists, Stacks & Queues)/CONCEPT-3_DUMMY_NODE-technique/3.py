@@ -27,6 +27,6 @@ def partition(head,x): #hamari original list listnode ha jisme hamne do dummy li
     greater.next=None                      
 
     less.next=greater_dummy.next
-    return less_dummy                       
+    return less_dummy.next                       
                                              
 
