@@ -60,7 +60,7 @@ class LRUCache:
                 # Capacity full hai, toh LRU (tail se theek pehle wala node) ko uda do
                 lru = self.tail.prev
                 self._remove(lru)
-                del self.cache[lru.key]  # Hash Map se bhi hatao
+                del self.cache[lru.key]  # Hash Map se bhi hatao 
             
             # Naya node banao aur front par lagao
             new_node = Node(key, value)
