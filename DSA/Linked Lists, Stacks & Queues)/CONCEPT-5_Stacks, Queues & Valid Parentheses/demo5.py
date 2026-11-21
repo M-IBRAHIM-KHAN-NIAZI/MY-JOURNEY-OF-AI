@@ -24,11 +24,11 @@ class Solution:
                 node = queue.popleft()  # Queue ke aage (front) se node nikalo (FIFO)
                 current_level.append(node.val)  # Us node ki value level list mein daalo
 
-                # Agar left child hai toh usko queue ke aakhir mein daal do
+                # Agar left child hai toh usko queue ke  daal do
                 if node.left:
                     queue.append(node.left)
 
-                # Agar right child hai toh usko bhi queue ke aakhir mein daal do
+                # Agar right child hai toh usko bhi queue  mein daal do
                 if node.right:
                     queue.append(node.right)
 
@@ -36,3 +36,21 @@ class Solution:
             result.append(current_level)
 
         return result
+ # --- Local Testing Block ---
+if __name__ == "__main__":
+    # Tree banate hain:
+    #       3
+    #      / \
+    #     9  20
+    #       /  \
+    #      15   7
+    root = TreeNode(3)
+    root.left = TreeNode(9)
+    root.right = TreeNode(20)
+    root.right.left = TreeNode(15)
+    root.right.right = TreeNode(7)
+
+    sol = Solution()
+    output = sol.levelOrder(root)
+
+    print("Level Order Output ([[3], [9, 20], [15, 7]] expected):", output)   
