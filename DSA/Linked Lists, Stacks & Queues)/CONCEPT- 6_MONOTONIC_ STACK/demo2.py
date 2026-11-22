@@ -14,7 +14,7 @@ def largestRectangleArea(heights):
             # Agar stack abhi bhi khali nahi hai, toh stack[-1] left boundary se just pehle ka index hai.
             # Agar stack khali ho gaya, toh bar shuru (index 0) se lekar i tak fail sakti hai.
             left_boundary = stack[-1] if stack else -1
-            width = i - left_boundary - 1
+            width = i - left_boundary - 1 
 
             area = bar_height * width
             if area > max_area:
