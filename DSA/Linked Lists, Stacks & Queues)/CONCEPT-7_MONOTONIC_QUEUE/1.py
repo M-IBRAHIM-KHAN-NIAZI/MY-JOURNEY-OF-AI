@@ -29,3 +29,6 @@ def maxSlidingWindow(nums, k):
 print(maxSlidingWindow([1, 3, -1, -3, 5, 3, 6, 7], 3))  # [3, 3, 5, 5, 6, 7]
 print(maxSlidingWindow([2,1,5,3], 2))                          # [2,5,5]
 print(maxSlidingWindow([4, 2, 1], 2))                    # [4, 2]
+# Sliding Window aise kaam karti hai ke pehle 'k' size ki pehli window ban kar uske elements check kiye jaate hain;
+# phir har agle step mein window ko aage saraktay hue left se purana element nikala jaata hai aur right se naya element add karke dubara check kiya jaata hai—
+# is tarah poori array par bina dobara shuru se ghumay har window ka result nikal aata hai.
