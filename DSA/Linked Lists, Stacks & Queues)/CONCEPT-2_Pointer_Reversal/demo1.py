@@ -14,7 +14,7 @@ def reverse_list(head):
         next_node = current.next
         
         # Step 2: Connection ulta kar do (aage jane ke bajaye peechhe jodh do)
-        current.next = prev
+        current.next = prev #golden rule: phele node ke pointer ko none ke sth jor du tu reverse hujati
         
         # Step 3: Dono pointers ko ek-ek step aage khiska do
         prev = current
