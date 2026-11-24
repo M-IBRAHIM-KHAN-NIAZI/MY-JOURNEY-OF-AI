@@ -15,7 +15,7 @@ class browserhistory:
         self.head.next=new_node
         new_node.prev=self.head
 
-        self.current=new_node
+        self.current=new_node #very imp point
 
     def back (self,steps):
         while steps>0 and self.current.prev:
