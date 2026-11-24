@@ -42,7 +42,7 @@ class LRU_CACHE:
         if key in self.cache:
             node=self.cache[key]
             self.remove(node)
-            node.val=value
+            node.val=value #very imp line
             self.add(node)
         else:
 
