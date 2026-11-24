@@ -27,7 +27,7 @@ class Solution:
                 stack.append(int(token))
                 
         # Aakhir mein stack ke andar sirf ek hi final answer bacha hoga
-        return stack[0]
+        return stack [0]
 
 # --- Local Testing Block ---
 if __name__ == "__main__":
