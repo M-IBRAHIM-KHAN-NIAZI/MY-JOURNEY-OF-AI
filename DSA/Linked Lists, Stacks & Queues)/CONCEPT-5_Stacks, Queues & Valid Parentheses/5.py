@@ -12,9 +12,9 @@ def tree(roots):
     result=[]
     queue=deque([roots])
     while queue:
-        level_size=len(queue)
+        
         current_level=[]
-        for _ in range(level_size):
+        for _ in range(len(queue)):
             node=queue.popleft()
             current_level.append(node.val)
 

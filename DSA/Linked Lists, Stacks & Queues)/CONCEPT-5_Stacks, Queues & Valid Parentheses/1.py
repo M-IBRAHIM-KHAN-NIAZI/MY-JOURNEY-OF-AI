@@ -8,7 +8,7 @@ class solution:
             if characters in mapping:
                 top_element=stack.pop() if stack else "#"
 
-                if mapping[characters]!=top_element:
+                if mapping[characters] !=top_element:
                     return False
             else:
                 stack.append(characters)
