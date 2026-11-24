@@ -1,5 +1,5 @@
 # ==========================================
-# LeetCode 86: Partition List (Example 1)
+# LeetCode 86: Partition List 
 # ==========================================
 class listnode:
     def __init__(self,value):
