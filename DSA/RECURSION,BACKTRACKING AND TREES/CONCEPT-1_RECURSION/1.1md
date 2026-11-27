@@ -1,0 +1,27 @@
+what is Fibonacci numbers?
+The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the 
+sum of the two preceding ones, starting from 0 and 1.
+### Movement Logic Summary with Example (Fibonacci Number - LC 509)
+
+- **Downward Movement (Call Chain):**
+  - Har call khud ko chote inputs (`n - 1` aur `n - 2`) ke saath call karti hai.
+  - Apna `+` ka hisaab rok kar rakhti hai jab tak base case (`n == 0` ya `n == 1`) na aaye.
+
+- **Turnaround Point (Base Case):**
+  - Jab `n == 0` ya `n == 1` hit hota hai, toh neeche jaana rukta hai.
+  - Yahan se seedhi value (`0` ya `1`) wapas aati hai.
+
+- **Upward Movement (Unwinding):**
+  - Neeche se aati hui values har ruki hui call ke `[Left] + [Right]` mein fit hoti hain.
+  - Sum banati hain aur final result upar bhejti hain.
+
+- **Example (`fib(3)`):**
+  - **Downward:**
+    - `fib(3)` waits for `[fib(2)] + [fib(1)]`
+    - `fib(2)` waits for `[fib(1)] + [fib(0)]`
+    - `fib(1)` hits base case -> returns `1`
+  - **Right & Unwinding:**
+    - `fib(2)` calls `fib(0)` -> returns `0`
+    - `fib(2)` computes `1 + 0 = 1` -> returns `1` to `fib(3)`
+    - `fib(3)` calls `fib(1)` -> returns `1`
+    - `fib(3)` computes `1 + 1 = 2` -> final answer `2`
